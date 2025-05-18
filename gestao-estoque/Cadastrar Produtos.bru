@@ -1,0 +1,25 @@
+meta {
+  name: Cadastrar Produtos
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/produtos
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nomeProduto": "PC Gamer",
+    "descricaoProduto": "PC Gamer com I5 10º Geração",
+    "quantidadeProduto": 5,
+    "quantidadeMinimaProduto": 5,
+    "precoProduto": 1200.00
+  }
+}
