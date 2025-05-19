@@ -9,6 +9,28 @@ Este projeto é uma API para gerenciamento de estoque, permitindo o controle de 
 - **Banco de Dados:** Pode utilizar PostgreSQL, MySQL ou outro compatível com Spring Data JPA
 - **Outros:** Spring Security, Spring Data JPA, Lombok, dotenv (para variáveis de ambiente)
 
+
+## Estrutura das Pastas
+
+- `src/main/java/com/seuusuario/gestaoestoque/`
+    - `controller/` — Controladores REST para produtos, categorias, movimentações e usuários
+    - `dto/` — Objetos de transferência de dados (DTOs)
+    - `exception/` — Tratamento de exceções personalizadas
+    - `model/` — Entidades JPA do domínio
+    - `repository/` — Interfaces do Spring Data JPA
+    - `security/` — Configurações e classes de segurança (JWT, filtros, etc)
+    - `service/` — Serviços de negócio
+    - `util/` — Utilitários e helpers
+    - `GestaoEstoqueApiApplication.java` — Classe principal da aplicação
+
+- `src/main/resources/`
+    - `application.properties` — Configurações da aplicação
+    - `db/migration/` — Scripts de migração do banco (Flyway ou Liquibase, se utilizado)
+
+- `src/test/java/com/seuusuario/gestaoestoque/`
+    - Testes unitários e de integração
+
+
 ## Instalação
 
 1. Clone o repositório:
@@ -33,16 +55,6 @@ Este projeto é uma API para gerenciamento de estoque, permitindo o controle de 
     ./gradlew bootRun
     ```
 
-## Estrutura do Projeto
-
-- `src/main/java/`
-  - `controller/` — Lógica das rotas e regras de negócio
-  - `model/` — Modelos das entidades do banco de dados
-  - `repository/` — Interfaces de acesso ao banco de dados
-  - `service/` — Lógica de negócio
-  - `config/` — Configurações gerais (ex: segurança, banco de dados)
-  - `GestaoEstoqueApiApplication.java` — Inicialização do Spring Boot
-
 ## Funcionalidades
 
 - Cadastro, edição e remoção de produtos
@@ -53,8 +65,3 @@ Este projeto é uma API para gerenciamento de estoque, permitindo o controle de 
 ## Contribuição
 
 Pull requests são bem-vindos! Abra uma issue para discutir melhorias ou reportar bugs.
-
----
-
-> **Nota:** Altere as instruções conforme as tecnologias e dependências reais do seu projeto.
-
